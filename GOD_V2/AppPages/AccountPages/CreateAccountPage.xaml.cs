@@ -1,4 +1,5 @@
 using GOD_V2.MVVM;
+using GOD_V2.MVVM.ViewModels;
 
 namespace GOD_V2.AppPages.AccountPages;
 
@@ -22,11 +23,11 @@ public partial class CreateAccountPage : ContentPage
             EntryConfirmPassword.Placeholder = "Vul iets in!";
         else
         {
-            if (User.Checkusername(EntryUsername.Text))
+            if (VM_User.Checkusername(EntryUsername.Text))
             {
                 if (EntryPassword.Text == EntryConfirmPassword.Text)
                 {
-                    User.CreateNewUser(EntryUsername.Text, EntryPassword.Text);
+                    VM_User.CreateNewUser(EntryUsername.Text, EntryPassword.Text);
                     Navigation.PushAsync(new HomePage());
                 }
                 else

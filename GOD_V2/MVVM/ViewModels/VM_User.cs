@@ -9,26 +9,10 @@ namespace GOD_V2.MVVM.ViewModels
     {
         public User? currentuser { get; set; }
         public static List<User>? users { get; set; }
-        public ICommand? AddOrUpdateCommand { get; set; }
-        public ICommand? DeleteCommand { get; set; }
-
-
-        public VM_User()
+        public static void CreateNewUser(string username, string password)
         {
-            Refresh();
-            AddOrUpdateCommand = new Command(async () =>
-            {
-                App.UserRepo.SaveEntity(currentuser);
-                Console.WriteLine(App.UserRepo.statusMessage);
-                Refresh();
-            });
-
-            DeleteCommand = new Command(async () =>
-            {
-                App.UserRepo.DeleteEntity(currentuser);
-                Console.WriteLine(App.UserRepo.statusMessage);
-                Refresh();
-            });
+            User user = new User(username, password);
+            App.UserRepo.SaveEntity(user);
         }
 
         private static void Refresh()
@@ -47,6 +31,18 @@ namespace GOD_V2.MVVM.ViewModels
                         result = true;
             }
             return result;
+        }
+
+        public static bool Checkusername(string Username)
+        {
+            foreach (var user in users)
+            {
+                if (user.name == Username)
+                    return false;
+                else
+                    return true;
+            }
+            return false;
         }
     }
 }
