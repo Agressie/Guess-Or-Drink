@@ -8,5 +8,6 @@ namespace GOD_V2.MVVM
 {
     internal class Category
     {
+
     }
 }
