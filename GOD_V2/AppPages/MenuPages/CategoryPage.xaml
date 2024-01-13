@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GOD_V2.AppPages.MenuPages.CategoryPage"
+             Title=" ">
+    <StackLayout>
+        <Label 
+            Text="Choose a Category"
+            VerticalOptions="Center" 
+            Style="{StaticResource Headline}"
+            HorizontalOptions="Center"
+            Margin="20"/>
+        <Label
+            Text="Choose the category that excites you the most!!"
+            HorizontalTextAlignment="Center"
+            Margin="10"/>
+
+        <Button
+            x:Name="BtnHappyhour"
+            Text="Happy Hour"
+            Clicked="Happyhourclicked"
+            HorizontalOptions="Fill"
+            WidthRequest="250"
+            HeightRequest="100"
+            BackgroundColor="LightGoldenrodYellow"
+            BorderColor="Black"
+            BorderWidth="1"
+            TextColor="Black"
+            Margin="5"/>
+        <Button
+            x:Name="BtnOntherocks"
+            Text="On The Rocks" 
+            Clicked="Ontherocksclicked"
+            HorizontalOptions="Fill"
+            WidthRequest="250"
+            HeightRequest="100"
+            BackgroundColor="Orange"
+            BorderColor="Black"
+            BorderWidth="1"
+            TextColor="Black"
+            Margin="5"/>
+        <Button
+            x:Name="BtnLastcall"
+            Text="Last Call" 
+            Clicked="Lastcallclicked"
+            HorizontalOptions="Fill"
+            WidthRequest="250"
+            HeightRequest="100"
+            BackgroundColor="OrangeRed"
+            BorderColor="Black"
+            BorderWidth="1"
+            TextColor="Black"
+            Margin="5"/>
+        <Button
+            x:Name="BtnSpicy"
+            Text="✨ Spicy ✨" 
+            Clicked="Spicyclicked"
+            HorizontalOptions="Fill"
+            WidthRequest="250"
+            HeightRequest="100"
+            BackgroundColor="Crimson"
+            BorderColor="Black"
+            BorderWidth="1"
+            TextColor="Black"
+            Margin="5"/>
+    </StackLayout>
+</ContentPage>

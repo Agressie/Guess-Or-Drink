@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GOD_V2.AppPages.MenuPages.GamemodePage"
+             Title=" ">
+    <StackLayout>
+        <Label 
+            Text="Choose a Gamemode"
+            VerticalOptions="Center" 
+            Style="{StaticResource Headline}"
+            HorizontalOptions="Center"
+            Margin="5"/>
+        <Label
+            Text="Choose the gamemode that you wanna play with your friends"
+            WidthRequest="250"
+            HorizontalTextAlignment="Center"
+            Margin="5"/>
+
+        <Frame CornerRadius="10"
+               BackgroundColor="Transparent"
+               Margin="20,10"
+               Padding="10">
+
+            <Grid>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="230"/>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+
+                <ImageButton
+                    Source="speakinggirl.png"
+                    WidthRequest="220"
+                    HeightRequest="220"
+                    Clicked="Guessclicked"
+                    Margin="10"/>
+
+                <Label
+                Grid.Row="1"
+                Text="test"
+                Style="{StaticResource SubHeadline}"/>
+
+            </Grid>
+        </Frame>
+        <Frame CornerRadius="10"
+           BackgroundColor="Transparent"
+           Margin="20,10"
+           Padding="10">
+
+            <Grid>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="230"/>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+                <ImageButton 
+                    Source="portrayingboy.png"
+                    WidthRequest="190"
+                    HeightRequest="190"
+                    Clicked="Portrayclicked"
+                    Margin="10"/>
+                
+                <Label
+                Grid.Row="1"
+                Text="Portray"
+                Style="{StaticResource SubHeadline}"/>
+            </Grid>
+        </Frame>
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GOD_V2.AppPages.MenuPages.RoundSettingsPage"
+             Title=" ">
+    <StackLayout>
+        <Label 
+           Text="Change the settings of your game"
+           VerticalOptions="Center" 
+           Style="{StaticResource Headline}"
+           HorizontalOptions="Center"
+           Margin="20"/>
+
+        <Button
+           x:Name="BtnAddobject"
+           Text="Persoon, Object of voorwerp toevoegen."
+           Clicked="Objectclicked"
+           HorizontalOptions="Fill"
+           WidthRequest="250"
+           HeightRequest="150"
+           Margin="5"/>
+        <Button
+           x:Name="BtnRondsettings"
+           Text="Ronde Settings" 
+           Clicked="Rondesettingclicked"
+           HorizontalOptions="Fill"
+           WidthRequest="250"
+           HeightRequest="150"
+           Margin="5"/>
+        <!-- The color of this button has to change acording to the category that is chosen -->
+        <Button
+           x:Name="BtnStart"
+           Text="Let's go get drunk!!" 
+           Clicked="StartClicked"
+           HorizontalOptions="Fill"
+           WidthRequest="250"
+           HeightRequest="100"
+           BackgroundColor="LightGoldenrodYellow"
+           TextColor="Black"
+           BorderColor="Black"
+           BorderWidth="1"
+           Margin="5"/>
+    </StackLayout>
+</ContentPage>
