@@ -10,5 +10,13 @@ namespace GOD_V2.MVVM.Models
     public class User : TableData
     {
         public string Password { get; set; }
+
+        public User(string name, string password)
+        {
+            this.name = name;
+            this.Password = password;
+        }
     }
+
+    
 }
