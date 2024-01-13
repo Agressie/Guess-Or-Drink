@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SQLite;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,9 +9,13 @@ namespace GOD_V2.MVVM
 {
     internal class User
     {
-        private string Username { get; set; }
-        private string Password { get; set; }
-        private static List<User> Users = new();
+        public int Id { get; set; }
+
+        public string Username { get; set; }
+
+        public string Password { get; set; }
+
+        public static List<User> Users = new();
 
         public User(string username, string password)
         {
