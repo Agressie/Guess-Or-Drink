@@ -18,7 +18,7 @@ namespace GOD_V2
                 });
             builder.Services.AddSingleton<BaseRepo<Category>>();
             builder.Services.AddSingleton<BaseRepo<Charade>>();
-            MVVM.User.Createusers();
+            builder.Services.AddSingleton<BaseRepo<User>>();
 #if DEBUG
             builder.Logging.AddDebug();
 #endif

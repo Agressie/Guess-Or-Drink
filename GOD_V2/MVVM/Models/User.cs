@@ -1,6 +1,4 @@
 ﻿using GOD_V2.SQLite;
-using SQLite;
-using SQLiteNetExtensions.Attributes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,10 +7,8 @@ using System.Threading.Tasks;
 
 namespace GOD_V2.MVVM.Models
 {
-    public class Charade : TableData
+    public class User : TableData
     {
-
-        [ForeignKey(typeof(Category))]
-        public Category? category { get; set; }
+        public string Password { get; set; }
     }
 }

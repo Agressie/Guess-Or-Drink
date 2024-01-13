@@ -13,6 +13,6 @@ namespace GOD_V2.MVVM.Models
 {
     public class Category : TableData
     {
-        //public List<Charade> Charades = new List<Charade>();
+        public List<Charade> Charades = new List<Charade>();
     }
 }
