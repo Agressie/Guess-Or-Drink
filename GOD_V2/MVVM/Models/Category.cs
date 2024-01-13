@@ -1,4 +1,6 @@
-﻿using SQLite;
+﻿using GOD_V2.SQLite;
+using SQLite;
+using SQLiteNetExtensions.Attributes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -9,14 +11,8 @@ using System.Threading.Tasks;
 
 namespace GOD_V2.MVVM.Models
 {
-    internal class Category
+    public class Category : TableData
     {
-        [PrimaryKey, AutoIncrement]
-        public int id { get; set; }
-
-        [MaxLength(64)]
-        public string? name { get; set; }
-
-        public List<Charade> Charades = new List<Charade>();
+        //public List<Charade> Charades = new List<Charade>();
     }
 }

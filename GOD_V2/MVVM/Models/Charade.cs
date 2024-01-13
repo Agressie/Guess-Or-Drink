@@ -1,4 +1,5 @@
-﻿using SQLite;
+﻿using GOD_V2.SQLite;
+using SQLite;
 using SQLiteNetExtensions.Attributes;
 using System;
 using System.Collections.Generic;
@@ -8,15 +9,10 @@ using System.Threading.Tasks;
 
 namespace GOD_V2.MVVM.Models
 {
-    internal class Charade
+    public class Charade : TableData
     {
-        [PrimaryKey, AutoIncrement]
-        public int id { get; set; }
 
-        [Column("charade"), Indexed]
-        public string? _charade { get; set; }
-
-        [ForeignKey(typeof(Category))]
-        public Category? category { get; set; }
+        //[ForeignKey(typeof(Category))]
+        //public Category? category { get; set; }
     }
 }
