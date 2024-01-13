@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GOD_V2.MVVM
+namespace GOD_V2.MVVM.Models
 {
     internal class Charade
     {
@@ -16,7 +16,7 @@ namespace GOD_V2.MVVM
         [Column("charade"), Indexed]
         public string? _charade { get; set; }
 
-        [ManyToOne(CascadeOperations =CascadeOperation.All)]
+        [ForeignKey(typeof(Category))]
         public Category? category { get; set; }
     }
 }
