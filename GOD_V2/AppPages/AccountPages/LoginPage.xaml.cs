@@ -1,3 +1,4 @@
+using GOD_V2.AppPages.MenuPages;
 using GOD_V2.MVVM;
 
 namespace GOD_V2.AppPages.AccountPages;

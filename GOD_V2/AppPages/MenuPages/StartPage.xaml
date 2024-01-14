@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GOD_V2.AppPages.MenuPages.StartPage"
+             Title=" ">
+    <StackLayout>
+        <Label 
+            Text="Press the button downbelow to create a game."
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Button
+            x:Name="btnStart"
+            Text="Create Game!" 
+            WidthRequest="200"
+            HeightRequest="100"
+            TextColor="White"
+            BackgroundColor="Red"
+            Clicked="OnStartclicked"
+            HorizontalOptions="Fill" />
+    </StackLayout>
+</ContentPage>
