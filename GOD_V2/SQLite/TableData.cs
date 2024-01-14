@@ -13,7 +13,7 @@ namespace GOD_V2.SQLite
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
 
-        [MaxLength(64)]
-        public string? name { get; set; }
+        [Column("name"), Unique]
+        public string Name { get; set; }
     }
 }

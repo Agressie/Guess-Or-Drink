@@ -1,6 +1,5 @@
 ﻿using GOD_V2.SQLite;
 using SQLite;
-using SQLiteNetExtensions.Attributes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -13,6 +12,6 @@ namespace GOD_V2.MVVM.Models
 {
     public class Category : TableData
     {
-        public List<Charade> Charades = new List<Charade>();
+        //private List<Charade> charades = new List<Charade>();
     }
 }

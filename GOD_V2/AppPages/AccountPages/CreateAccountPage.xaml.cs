@@ -23,7 +23,7 @@ public partial class CreateAccountPage : ContentPage
             EntryConfirmPassword.Placeholder = "Vul iets in!";
         else
         {
-            if (VM_User.Checkusername(EntryUsername.Text))
+            if (VM_User.Checkusername(EntryUsername.Text) == false)
             {
                 if (EntryPassword.Text == EntryConfirmPassword.Text)
                 {
