@@ -8,25 +8,9 @@
             Spacing="25">
 
         <Label
-                Text="Welcome in the Guess Or Drink App"
+                Text="Create HOME page here, And a button to start the game or go to account. Pherhaps an account display page!"
                 Style="{StaticResource Headline}"
                 SemanticProperties.HeadingLevel="Level1" />
-        <Label
-            Text="Downbelow you can choose 2 options, one is to see your account details and the other is to create a new game."
-            SemanticProperties.HeadingLevel="Level1" />
-        <Button 
-            x:Name="btnseeacount"
-            Text="See Account"
-            WidthRequest="150"
-            BackgroundColor="Black"
-            TextColor="White"
-            Clicked="OnAccountClicked"/>
-        <Button 
-            x:Name="btncreategame"
-            Text="Create Game"
-            WidthRequest="150"
-            BackgroundColor="Green"
-            Clicked="OnCreateGameClicked"/>
     </StackLayout>
 
 </ContentPage>

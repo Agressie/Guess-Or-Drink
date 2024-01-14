@@ -1,6 +1,5 @@
 ﻿using GOD_V2.MVVM;
-using GOD_V2.AppPages.AccountPages;
-using GOD_V2.AppPages.MenuPages;
+using GOD_V2.AppPages;
 
 namespace GOD_V2.AppPages
 {
@@ -9,15 +8,6 @@ namespace GOD_V2.AppPages
         public HomePage()
         {
             InitializeComponent();
-        }
-
-        public void OnAccountClicked(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new AccountPage());
-        }
-        public void OnCreateGameClicked(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new CategoryPage());
         }
     }
 

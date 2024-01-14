@@ -1,6 +1,4 @@
 using GOD_V2.MVVM;
-using GOD_V2.AppPages.MenuPages;
-using Plugin.LocalNotification;
 
 namespace GOD_V2.AppPages.AccountPages;
 
@@ -29,7 +27,6 @@ public partial class CreateAccountPage : ContentPage
                 if (EntryPassword.Text == EntryConfirmPassword.Text)
                 {
                     User.CreateNewUser(EntryUsername.Text, EntryPassword.Text);
-                    PushNotify(EntryUsername.Text);
                     Navigation.PushAsync(new HomePage());
                 }
                 else
@@ -38,22 +35,5 @@ public partial class CreateAccountPage : ContentPage
             else
                 Invalid.Text = "Username already exists";
         }
-    }
-    private void PushNotify(string username)
-    {
-        var request = new NotificationRequest
-        {
-            NotificationId=1000,
-            Title="Welcome to Guess Or Drink",
-            Subtitle="Account created with GOD",
-            Description="Thankyou for creating an account with us, and remember don't go over your limits!",
-            BadgeNumber=42,
-            Schedule=new NotificationRequestSchedule
-            {
-                NotifyTime=DateTime.Now.AddSeconds(5),
-                NotifyRepeatInterval=TimeSpan.FromSeconds(5),
-            }
-        };
-        LocalNotificationCenter.Current.Show(request);
     }
 }
