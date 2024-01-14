@@ -1,4 +1,6 @@
 using GOD_V2.MVVM;
+using GOD_V2.MVVM.ViewModels;
+using GOD_V2.AppPages;
 
 namespace GOD_V2.AppPages.AccountPages;
 
@@ -19,7 +21,7 @@ public partial class LoginPage : ContentPage
             EntryPassword.Placeholder = "Vul iets in!";
         else
         {
-            if (User.LoginCheck(EntryUsername.Text, EntryPassword.Text) == true)
+            if (VM_User.LoginCheck(EntryUsername.Text, EntryPassword.Text) == true)
                 Navigation.PushAsync(new HomePage());
             else
                 Invalid.IsVisible = true;
