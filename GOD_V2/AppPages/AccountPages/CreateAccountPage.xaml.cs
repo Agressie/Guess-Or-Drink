@@ -1,5 +1,6 @@
 using GOD_V2.MVVM;
 using GOD_V2.MVVM.ViewModels;
+using Plugin.LocalNotification;
 
 namespace GOD_V2.AppPages.AccountPages;
 
@@ -36,5 +37,23 @@ public partial class CreateAccountPage : ContentPage
             else
                 Invalid.Text = "Username already exists";
         }
+    }
+
+    public void Accountnotification(string username)
+    {
+        var rq = new NotificationRequest
+        {
+            NotificationId = 1000,
+            Title = "Welcome to Guess Or Drink",
+            Subtitle = "Account created with GOD",
+            Description = "Thank you for creating an account with us. Have fun and remember don't go over your limits!",
+            BadgeNumber = 42,
+            Schedule = new NotificationRequestSchedule
+            {
+                NotifyTime = DateTime.Now.AddSeconds(30),
+                NotifyRepeatInterval = TimeSpan.FromSeconds(30),
+            }
+        };
+        LocalNotificationCenter.Current.Show(rq);
     }
 }
