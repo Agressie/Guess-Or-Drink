@@ -13,5 +13,6 @@ namespace GOD_V2.SQLite
         T? GetSpecificEntity(int id);
         List<T>? GetEntities();
         void DeleteEntity(T entity);
+        bool Checkifempty();
     }
 }

@@ -30,7 +30,10 @@ public partial class CreateAccountPage : ContentPage
                 {
                     VM_User.CreateNewUser(EntryUsername.Text, EntryPassword.Text);
                     if (VM_User.LoginCheck(EntryUsername.Text, EntryPassword.Text) == true)
+                    {
+                        Accountnotification(EntryUsername.Text);
                         Navigation.PushAsync(new HomePage());
+                    }
                 }
                 else
                     Invalid.Text = "Passwords don't match";
@@ -47,7 +50,7 @@ public partial class CreateAccountPage : ContentPage
             NotificationId = 1000,
             Title = "Welcome to Guess Or Drink",
             Subtitle = "Account created with GOD",
-            Description = "Thank you for creating an account with us. Have fun and remember don't go over your limits!",
+            Description = $"Thank you {username} for creating an account with us. Have fun and remember don't go over your limits!",
             BadgeNumber = 42,
             Schedule = new NotificationRequestSchedule
             {

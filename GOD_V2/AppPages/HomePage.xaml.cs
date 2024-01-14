@@ -17,6 +17,7 @@ namespace GOD_V2.AppPages
         }
         public void OnCreategameClicked(object sender, EventArgs e)
         {
+            Game.CreateGame();
             Navigation.PushAsync(new CategoryPage());
         }
     }

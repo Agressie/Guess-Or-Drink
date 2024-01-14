@@ -15,25 +15,26 @@ public partial class CategoryPage : ContentPage
     public void Happyhourclicked(object sender, EventArgs e)
     {
         Navigation.PushAsync(new GamemodePage());
-        Category category = VM_Category.GetCategory(0);
-        // Color: LightGoldenrodYellow
+        SetGameCategory(0);
     }   
     public void Ontherocksclicked(object sender, EventArgs e)
     {
         Navigation.PushAsync(new GamemodePage());
-        VM_Category.GetCategory(1);
-        // Color: Orange
+        SetGameCategory(1);
     }
     public void Lastcallclicked(object sender, EventArgs e)
     {
         Navigation.PushAsync(new GamemodePage());
-        VM_Category.GetCategory(2);
-        // Color: OrangeRed
+        SetGameCategory(2);
     }
     public void Spicyclicked(object sender, EventArgs e)
     {
         Navigation.PushAsync(new GamemodePage());
-        VM_Category.GetCategory(3);
-        // Color: Crimson
+        SetGameCategory(3);
+    }
+    private void SetGameCategory(int cat)
+    {
+        Category category = VM_Category.GetCategory(cat);
+        Game.SetCategory(category);
     }
 }

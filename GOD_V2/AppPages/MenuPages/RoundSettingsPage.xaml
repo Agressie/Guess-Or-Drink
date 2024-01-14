@@ -10,15 +10,7 @@
            Style="{StaticResource Headline}"
            HorizontalOptions="Center"
            Margin="20"/>
-
-        <Button
-           x:Name="BtnAddobject"
-           Text="Persoon, Object of voorwerp toevoegen."
-           Clicked="Objectclicked"
-           HorizontalOptions="Fill"
-           WidthRequest="250"
-           HeightRequest="150"
-           Margin="5"/>
+        
         <Button
            x:Name="BtnRondsettings"
            Text="Ronde Settings" 
@@ -27,6 +19,7 @@
            WidthRequest="250"
            HeightRequest="150"
            Margin="5"/>
+        
         <!-- The color of this button has to change acording to the category that is chosen -->
         <Button
            x:Name="BtnStart"

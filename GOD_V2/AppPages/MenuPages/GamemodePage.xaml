@@ -18,13 +18,14 @@
 
         <Frame CornerRadius="10"
                BackgroundColor="Transparent"
+               BorderColor="Transparent"
                Margin="20,10"
-               Padding="10">
+               Padding="1">
 
             <Grid>
 
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="230"/>
+                    <RowDefinition Height="200"/>
                     <RowDefinition Height="50"/>
                 </Grid.RowDefinitions>
 
@@ -37,20 +38,21 @@
 
                 <Label
                 Grid.Row="1"
-                Text="test"
+                Text="Guess"
                 Style="{StaticResource SubHeadline}"/>
 
             </Grid>
         </Frame>
         <Frame CornerRadius="10"
-           BackgroundColor="Transparent"
-           Margin="20,10"
-           Padding="10">
+               BackgroundColor="Transparent"
+               Margin="20,10"
+               BorderColor="Transparent"
+               Padding="1">
 
             <Grid>
 
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="230"/>
+                    <RowDefinition Height="200"/>
                     <RowDefinition Height="50"/>
                 </Grid.RowDefinitions>
                 <ImageButton 

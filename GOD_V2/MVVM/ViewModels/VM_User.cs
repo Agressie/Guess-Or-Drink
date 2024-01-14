@@ -8,7 +8,8 @@ namespace GOD_V2.MVVM.ViewModels
     public class VM_User
     {
         public static User? currentuser { get; set; }
-        public static List<User>? users { get; set; }
+        public static List<User>? users = new List<User>();
+
         public static void CreateNewUser(string username, string password)
         {
             Refresh();

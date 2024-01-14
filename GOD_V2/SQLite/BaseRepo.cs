@@ -97,7 +97,7 @@ namespace GOD_V2.SQLite
                 statusMessage = $"Error: {ex.Message}";
             }
         }
-        public Boolean Checkifempty()
+        public bool Checkifempty()
         {
             var result = false;
             try
