@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using GOD_V2.MVVM.Models;
+using GOD_V2.SQLite;
+using Microsoft.Extensions.Logging;
 
 namespace GOD_V2
 {
@@ -14,7 +16,9 @@ namespace GOD_V2
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
-            MVVM.User.Createusers();
+            builder.Services.AddSingleton<BaseRepo<Category>>();
+            builder.Services.AddSingleton<BaseRepo<Charade>>();
+            builder.Services.AddSingleton<BaseRepo<User>>();
 #if DEBUG
             builder.Logging.AddDebug();
 #endif
