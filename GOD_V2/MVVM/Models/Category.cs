@@ -12,6 +12,9 @@ namespace GOD_V2.MVVM.Models
 {
     public class Category : TableData
     {
-        //private List<Charade> charades = new List<Charade>();
+        private List<Charade> charades = new List<Charade>();
+        
+        [Ignore]
+        public string color {  get; set; }
     }
 }

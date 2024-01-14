@@ -53,5 +53,10 @@ namespace GOD_V2.MVVM.ViewModels
             }
             return false;
         }
+
+        public void setcurrentuser(User user)
+        {
+            currentuser = user;
+        }
     }
 }

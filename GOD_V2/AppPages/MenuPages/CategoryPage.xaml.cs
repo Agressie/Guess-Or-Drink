@@ -1,3 +1,6 @@
+using GOD_V2.MVVM.Models;
+using GOD_V2.MVVM.ViewModels;
+
 namespace GOD_V2.AppPages.MenuPages;
 
 public partial class CategoryPage : ContentPage

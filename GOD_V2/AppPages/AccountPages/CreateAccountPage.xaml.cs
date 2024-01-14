@@ -29,7 +29,8 @@ public partial class CreateAccountPage : ContentPage
                 if (EntryPassword.Text == EntryConfirmPassword.Text)
                 {
                     VM_User.CreateNewUser(EntryUsername.Text, EntryPassword.Text);
-                    Navigation.PushAsync(new HomePage());
+                    if (VM_User.LoginCheck(EntryUsername.Text, EntryPassword.Text) == true)
+                        Navigation.PushAsync(new HomePage());
                 }
                 else
                     Invalid.Text = "Passwords don't match";
