@@ -8,9 +8,32 @@
             Spacing="25">
 
         <Label
-                Text="Create HOME page here, And a button to start the game or go to account. Pherhaps an account display page!"
+                Text="Welcome to Guess Or Drink!"
                 Style="{StaticResource Headline}"
                 SemanticProperties.HeadingLevel="Level1" />
+        <Label
+                Text="Hieronder kun je kiezen uit 2 keuzes, het inzien van jou account details of het starten van een nieuwe game. Druk op 1 van de volgende knoppen om een keuze te maken." />
+        <Button
+            x:Name="btnseeaccount"
+            Text="See Account Details"
+            Clicked="OnSeeAccountClicked"
+            HeightRequest="200"
+            WidthRequest="300"
+            BackgroundColor="DarkRed"
+            TextColor="White"
+            FontSize="20"
+            HorizontalOptions="Center"/>
+
+        <Button
+            x:Name="btncreategame"
+            Text="Create a new game"
+            HeightRequest="200"
+            WidthRequest="300"
+            Clicked="OnCreategameClicked"
+            BackgroundColor="DarkRed"
+            TextColor="White"
+            FontSize="20"
+            HorizontalOptions="Center"/>
     </StackLayout>
 
 </ContentPage>

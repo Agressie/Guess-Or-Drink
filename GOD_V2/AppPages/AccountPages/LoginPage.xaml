@@ -56,5 +56,6 @@
                 BackgroundColor="White"
                 TextColor="Black"
                 HorizontalOptions="Center"/>
+        
     </StackLayout>
 </ContentPage>
