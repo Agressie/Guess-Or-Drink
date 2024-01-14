@@ -97,5 +97,24 @@ namespace GOD_V2.SQLite
                 statusMessage = $"Error: {ex.Message}";
             }
         }
+        public Boolean Checkifempty()
+        {
+            var result = false;
+            try
+            {
+                var table = connection.Table<T>().ToList();
+                if (table == null)
+                {
+                    statusMessage = $"Table is empty";
+                    result = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                statusMessage = $"Error: {ex.Message}";
+                result = false;
+            }
+            return result;
+        }
     }
 }
