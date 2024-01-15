@@ -5,9 +5,16 @@
              Title=" ">
     <VerticalStackLayout>
         <Label 
+           Text="Game Settings"
+           VerticalOptions="Center" 
+           Style="{StaticResource Headline}"
+           HorizontalOptions="Center"/>
+        <Label 
             Text="On this page you can change the settings of your game, please set the amount of rounds and add your teams."
             VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            HorizontalTextAlignment="Center"
+            HorizontalOptions="Center"
+            Margin="20"/>
         <Label 
             Text="Rounds"
             VerticalOptions="Center" 
@@ -18,7 +25,7 @@
             HorizontalTextAlignment="Center"
             WidthRequest="160"/>
         <Label 
-            Text="Add a Team"
+            Text="Add a team"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
         <Entry
@@ -27,20 +34,30 @@
             HorizontalTextAlignment="Center"
             WidthRequest="160"/>
         <Button
+            Margin="10"
             x:Name="btnaddteam"
             Text="Add Team" 
             WidthRequest="150"
             TextColor="White"
             BackgroundColor="Green"
+            BorderColor="Black"
+            BorderWidth="1"
             Clicked="OnAddTeamClicked"
             HorizontalOptions="Fill" />
-
+        <Label 
+           Text=""
+           VerticalOptions="Center" 
+           Style="{StaticResource Headline}"
+           HorizontalOptions="Center"/>
         <Button
                 x:Name="btnsave"
-                Text="Save" 
+                Text="Save and Play" 
                 WidthRequest="250"
                 HeightRequest="150"
-                TextColor="White"
+                TextColor="Black"
+                FontSize="25"
+                BorderColor="Black"
+                BorderWidth="1"
                 BackgroundColor="LightGoldenrodYellow"
                 Clicked="OnSaveClicked"
                 HorizontalOptions="Fill" />

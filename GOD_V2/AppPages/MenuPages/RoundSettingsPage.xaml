@@ -10,17 +10,31 @@
            Style="{StaticResource Headline}"
            HorizontalOptions="Center"
            Margin="20"/>
+        <Label 
+           Text="Down here you can or change the settings of the game and add teams, or continue with 5 rounds and 2 standard teams."
+           VerticalOptions="Center" 
+           HorizontalOptions="Center"
+            HorizontalTextAlignment="Center"
+           Margin="20"/>
         
         <Button
            x:Name="BtnRondsettings"
            Text="Ronde Settings" 
            Clicked="Rondesettingclicked"
            HorizontalOptions="Fill"
+           TextColor="Black"
+           BorderColor="Black"
+            BorderWidth="1"
+            FontSize="25"
            WidthRequest="250"
            HeightRequest="150"
            Margin="5"/>
-        
-        <!-- The color of this button has to change acording to the category that is chosen -->
+        <Label 
+           Text=" "
+           VerticalOptions="Center" 
+           Style="{StaticResource Headline}"
+           HorizontalOptions="Center"
+           Margin="20"/>
         <Button
            x:Name="BtnStart"
            Text="Let's go get drunk!!" 
@@ -31,6 +45,7 @@
            BackgroundColor="LightGoldenrodYellow"
            TextColor="Black"
            BorderColor="Black"
+            FontSize="25"
            BorderWidth="1"
            Margin="5"/>
     </StackLayout>

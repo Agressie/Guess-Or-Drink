@@ -20,6 +20,7 @@ public partial class RoundSettingsPage : ContentPage
         ColorTypeConverter converter = new ColorTypeConverter();
         Color color = (Color)(converter.ConvertFromString(gamecolor));
         BtnStart.BackgroundColor = color;
+        BtnRondsettings.BackgroundColor = color;
     }
     public void Rondesettingclicked(object sender, EventArgs a)
     {

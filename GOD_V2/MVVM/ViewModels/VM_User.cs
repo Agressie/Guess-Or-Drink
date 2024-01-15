@@ -45,14 +45,15 @@ namespace GOD_V2.MVVM.ViewModels
         public static bool Checkusername(string Username)
         {
             Refresh();
+            bool result = true;
             foreach (var user in users)
             {
                 if (user.Name == Username)
-                    return false;
+                    result = true;
                 else
-                    return true;
+                    result = false;
             }
-            return false;
+            return result;
         }
 
         public void setcurrentuser(User user)
