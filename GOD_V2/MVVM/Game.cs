@@ -16,6 +16,8 @@ namespace GOD_V2.MVVM
 
         private static Game currentgame { get; set; }
 
+        public static int amountofrounds { get; set; }
+
         private Game()
         {
             
